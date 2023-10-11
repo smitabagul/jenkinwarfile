@@ -1,7 +1,51 @@
 pipeline
 {
-    agent
-    {
-        node
-    }
+	agent
+	{
+		node
+		{
+			lable 'built-in'
+		}
+	}
+	parameters
+	{
+		string(name: 'PERSON', defaultValue: 'Enter person name' description: 'Who should I say hello to?')
+	}
+	stages
+	{
+		stage('Check-out')
+		{
+			steps
+			{
+				sh 'rm -rf game-of-life'
+				sh 'git clone https://github.com/wakaleo/game-of-life.git'
+				echo 'check-out successfull'
+			}
+		}
+		stage('Buld')
+		{
+			steps
+			{
+				sh 'pwd'
+				echo 'built successfull'			
+			}
+		}
+		stage('test')
+		{
+			steps
+			{
+				sh 'mvn -version'
+				echo 'test successfull'
+			}
+		}
+		stage('Deploy')
+		{
+			steps
+			{
+				sh 'mvn -version'
+				echo 'Deploy successfull'
+			}
+		}
+	}
+	
 }
