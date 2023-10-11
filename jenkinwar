@@ -34,7 +34,7 @@ pipeline
 			steps
 			{
 				sh '''
-				mvn -version
+				mvn test
 				echo 'test successfull'
 				'''
 			}
