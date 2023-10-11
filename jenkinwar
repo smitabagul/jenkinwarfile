@@ -33,8 +33,10 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn test'
+				sh '''
+				mvn -version
 				echo 'test successfull'
+				'''
 			}
 		}
 		stage('Deploy')
