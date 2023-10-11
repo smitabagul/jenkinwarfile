@@ -33,7 +33,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn -v'
+				sh 'mvn test'
 				echo 'test successfull'
 			}
 		}
