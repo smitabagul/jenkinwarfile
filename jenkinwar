@@ -1,10 +1,9 @@
 pipeline
 {
 	agent
-	{
-		node
+	{node
 		{
-			lable 'built-in'
+			label 'built-in'
 		}
 	}
 	parameters
