@@ -33,7 +33,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn -version'
+				sh 'mvn --version'
 				echo 'test successfull'
 			}
 		}
@@ -41,7 +41,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'mvn -version'
+				sh 'mvn --version'
 				echo 'Deploy successfull'
 			}
 		}
