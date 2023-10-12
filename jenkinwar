@@ -26,6 +26,7 @@ pipeline
 			steps
 			{
 				sh 'pwd'
+				sh 'mvn clean install'
 				echo 'built successfull'			
 			}
 		}
