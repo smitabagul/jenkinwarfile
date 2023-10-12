@@ -26,7 +26,8 @@ pipeline
 			steps
 			{
 				
-				sh 'mvn package'
+				sh 'mvn -f /root/.jenkins/workspace/warfile-deploy/game-of-life'
+				sh 'mvn clean install'
 				echo 'built successfull'			
 			}
 		}
