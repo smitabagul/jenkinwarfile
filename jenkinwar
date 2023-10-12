@@ -25,7 +25,7 @@ pipeline
 		{
 			steps
 			{
-				sh 'cd /mnt/game-of-life'
+				
 				sh 'mvn clean install'
 				echo 'built successfull'			
 			}
