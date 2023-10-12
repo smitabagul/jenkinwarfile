@@ -16,6 +16,7 @@ pipeline
 		{
 			steps
 			{
+				sh 'cd /mnt/'
 				sh 'rm -rf game-of-life'
 				sh 'git clone https://github.com/wakaleo/game-of-life.git'
 				echo 'check-out successfull'
@@ -25,8 +26,7 @@ pipeline
 		{
 			steps
 			{
-				
-				sh 'mvn -f /root/.jenkins/workspace/warfile-deploy/game-of-life'
+				sh 'cd /mnt/game-of-life/'
 				sh 'mvn clean install'
 				echo 'built successfull'			
 			}
