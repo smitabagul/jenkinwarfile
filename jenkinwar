@@ -16,7 +16,6 @@ pipeline
 		{
 			steps
 			{
-				sh 'cd /mnt/'
 				sh 'rm -rf game-of-life'
 				sh 'git clone https://github.com/wakaleo/game-of-life.git'
 				echo 'check-out successfull'
@@ -26,8 +25,8 @@ pipeline
 		{
 			steps
 			{
-				sh 'cd game-of-life/'
-				sh 'mvn clean install'
+				
+				sh 'mvn package'
 				echo 'built successfull'			
 			}
 		}
